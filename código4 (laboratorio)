@@ -1,0 +1,27 @@
+using UnityEngine;
+
+public class GameManager4 : MonoBehaviour
+{
+    public bool TieneLlave = true;
+    public bool EspacioDisponible = true;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        bool Requisitos = TieneLlave == true & EspacioDisponible == true;
+        if (Requisitos == true)
+        {
+            Debug.Log("Cofre abierto");
+        }
+        else
+        {
+            Debug.Log("No puedes abrir el cofre");
+        }
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
