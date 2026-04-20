@@ -1,0 +1,33 @@
+using UnityEngine;
+
+public class GameManager3 : MonoBehaviour
+{
+    public int EnergiaActual = 100;
+    public int CostoHabilidad = 10;
+    public bool HabilidadUsada = true;
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        int EnergiaRestante = EnergiaActual - CostoHabilidad;
+        if (HabilidadUsada == true)
+        {
+            Debug.Log (EnergiaRestante);
+               
+           
+            
+                 
+            
+        } 
+       
+
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
