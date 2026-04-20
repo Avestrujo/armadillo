@@ -1,0 +1,37 @@
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class GameManager : MonoBehaviour
+{
+    [SerializeField] private int vida = 10;
+    [SerializeField] private bool tieneLlave = false;
+
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        Debug.Log(gameObject.name);
+        Debug.Log(gameObject.transform);
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // input.getkeydown(keycode.W)
+        if(Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            Debug.Log("La barra espaciadora fue presionada :)"); 
+            if (tieneLlave == true & vida >= 5)
+            {
+                Debug.Log("Puede entrar a la mazmorra");
+            }
+            else
+            {
+                Debug.Log("Git gud");
+            }
+        }
+    }
+}
